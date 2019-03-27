@@ -6,7 +6,9 @@ A wrapper for android permissions with easy and convenient callback you can chec
 
 Add this dependency to your app build.gradle file
 ```
-  implementation "com.kromer.permissionsmanager"
+dependencies {
+  implementation "com.kromer.permissions-manager:1.0.0"
+}
 ```
 Add this to your activity
 ```
