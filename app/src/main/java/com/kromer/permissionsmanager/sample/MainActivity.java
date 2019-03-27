@@ -8,7 +8,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import com.kromer.permissionsmanager.PermissionCallback;
 import com.kromer.permissionsmanager.PermissionsManager;
-import com.kromer.permissionsmanager.R;
 
 public class MainActivity extends AppCompatActivity {
 
