@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
   compileSdkVersion compile_sdk
   defaultConfig {
-    applicationId "com.kromer.permissionsmanager"
+    applicationId "com.kromer.permissionsmanager.sample"
     minSdkVersion minimum_sdk
     targetSdkVersion compile_sdk
     versionCode 1
