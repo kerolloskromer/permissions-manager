@@ -19,26 +19,28 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    PermissionsManager.getInstance()
-        .checkPermission(this, Manifest.permission.CAMERA, REQUEST_CODE,
-            "Camera permission is needed for core functionality",
-            "Permission was denied, but is needed for core functionality", "Settings",
-            new PermissionCallback() {
-              @Override
-              public void onGranted() {
-                // permission granted
-              }
+    PermissionsManager.getInstance().checkPermission(
+        this,
+        Manifest.permission.CAMERA, REQUEST_CODE,
+        "Camera permission is needed for core functionality",
+        "Permission was denied, but is needed for core functionality",
+        "Settings",
+        new PermissionCallback() {
+          @Override
+          public void onGranted() {
+            // permission granted
+          }
 
-              @Override
-              public void onDenied() {
-                // permission denied
-              }
+          @Override
+          public void onDenied() {
+            // permission denied
+          }
 
-              @Override
-              public void onResult(Intent data) {
-                // data received from intent in onActivityResult
-              }
-            });
+          @Override
+          public void onResult(Intent data) {
+            // data received from intent in onActivityResult
+          }
+        });
   }
 
   @Override
