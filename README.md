@@ -1,6 +1,6 @@
 # Permissions Manager
 
-A wrapper for android permissions
+A wrapper for android permissions with easy and convenient callback you can check for one permission or multiple permissions at once
 
 ## Getting Started
 
@@ -24,7 +24,7 @@ Add this to your activity
     PermissionsManager.getInstance().onActivityResult(this, requestCode, resultCode, data);
   }
 ```
-Use this to check for permission
+Use this to check for one permission
 ```
     PermissionsManager.getInstance()
         .checkPermission(this, Manifest.permission.CAMERA, REQUEST_CODE,
@@ -48,7 +48,7 @@ Use this to check for permission
             });
 ```
 
-## Authors
+## Author
 
 * **Kerollos Kromer** - *Android Developer* - [Linkedin](https://www.linkedin.com/in/kerollos-kromer-39aba078/)
 
