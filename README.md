@@ -1,0 +1,57 @@
+# Permissions Manager
+
+A wrapper for android permissions
+
+## Getting Started
+
+Add this dependency to your app build.gradle file
+```
+implementation...
+```
+Add this to your activity
+```
+  @Override
+  public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+      @NonNull int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    PermissionsManager.getInstance()
+        .onRequestPermissionsResult(this, requestCode, permissions, grantResults);
+  }
+
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+    PermissionsManager.getInstance().onActivityResult(this, requestCode, resultCode, data);
+  }
+```
+Use this to check for permission
+```
+    PermissionsManager.getInstance()
+        .checkPermission(this, Manifest.permission.CAMERA, REQUEST_CODE,
+            "Camera permission is needed for core functionality",
+            "Permission was denied, but is needed for core functionality", "Settings",
+            new PermissionCallback() {
+              @Override
+              public void onGranted() {
+                // permission granted
+              }
+
+              @Override
+              public void onDenied() {
+                // permission denied
+              }
+
+              @Override
+              public void onResult(Intent data) {
+                // data received from intent in onActivityResult
+              }
+            });
+```
+
+## Authors
+
+* **Kerollos Kromer** - *Android Developer* - [Linkedin](https://www.linkedin.com/in/kerollos-kromer-39aba078/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
