@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 import com.kromer.permissionsmanager.PermissionCallback;
 import com.kromer.permissionsmanager.PermissionsManager;
 
@@ -28,16 +29,19 @@ public class MainActivity extends AppCompatActivity {
           @Override
           public void onGranted() {
             // permission granted
+            Toast.makeText(MainActivity.this, "onGranted", Toast.LENGTH_SHORT).show();
           }
 
           @Override
           public void onDenied() {
             // permission denied
+            Toast.makeText(MainActivity.this, "onDenied", Toast.LENGTH_SHORT).show();
           }
 
           @Override
           public void onResult(Intent data) {
             // data received from intent in onActivityResult
+            Toast.makeText(MainActivity.this, "onActivityResult", Toast.LENGTH_SHORT).show();
           }
         });
   }
