@@ -49,7 +49,7 @@ Use this to check for one permission
           }
         });
 ```
-## Report bug/issue/improvement
+## Report Bug / Issue / Improvement
 
 Please feel free to report bug , issue or improvement - see the [Issues](https://github.com/kerolloskromer/permissions-manager/issues) section fisrt to prevent duplicates.
 Also, if you know how to fix this issue please feel free to fork this repo and make a pull request and i will gladly review and merge and add you as a contributer :)
