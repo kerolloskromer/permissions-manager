@@ -7,7 +7,7 @@ A wrapper for android permissions with easy and convenient callback you can chec
 Add this dependency to your app build.gradle file
 ```
 dependencies {
-  implementation "com.kromer.permissions-manager:1.0.0"
+  implementation "com.kromer:permissions-manager:1.0"
 }
 ```
 Add this to your activity
@@ -49,6 +49,10 @@ Use this to check for one permission
           }
         });
 ```
+## Report Bug / Issue / Improvement
+
+Please feel free to report bug , issue or improvement - see the [Issues](https://github.com/kerolloskromer/permissions-manager/issues) section fisrt to prevent duplicates.
+Also, if you know how to fix this issue please feel free to fork this repo and make a pull request and i will gladly review and merge and add you as a contributer :)
 
 ## Author
 
