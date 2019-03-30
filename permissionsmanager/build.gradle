@@ -1,12 +1,25 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+  userOrg = 'kerolloskromer'
+  repoName = 'permissions-manager'
+  groupId = 'com.kromer'
+  artifactId = 'permissions-manager'
+  publishVersion = version_name
+  desc =
+      'A wrapper for android permissions with easy and convenient callback you can check for one permission or multiple permissions at once'
+  website = 'https://github.com/kerolloskromer/permissions-manager'
+  licences = 'MIT'
+}
 
 android {
-  compileSdkVersion compile_sdk
+  compileSdkVersion compile_sdk_version
   defaultConfig {
-    minSdkVersion minimum_sdk
-    targetSdkVersion compile_sdk
-    versionCode 1
-    versionName "1.0"
+    minSdkVersion min_sdk_version
+    targetSdkVersion compile_sdk_version
+    versionCode version_code
+    versionName version_name
   }
 
   buildTypes {
